@@ -1,14 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
 import time
 
-from selenium.webdriver.support.wait import WebDriverWait
+LOGIN_MAIL = "YOUR_EMAIL_HERE"
+LOGIN_PW = "YOUR_PASSWORD"
 
-LOGIN_MAIL = "c.rath@live.com"
-LOGIN_PW = "4yU43NR5"
-SEARCH_INPUT = "Python Developer"  # Type your Job Keywords between the ""
+# Type your Job Keywords between the ""
+SEARCH_INPUT = "Python Developer"
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
@@ -57,5 +56,3 @@ remote_filter.send_keys(Keys.ESCAPE)
 # apply the "apply easy" filter
 easy_apply_btn = driver.find_element(By.XPATH, '//button[text()="Easy Apply"]')
 easy_apply_btn.click()
-
-
